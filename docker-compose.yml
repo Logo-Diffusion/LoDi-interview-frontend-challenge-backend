@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  django:
+    build: .
+    image: lodi-interview-backend
+    volumes:
+      - db:/app/db.sqlite3
+    env_file:
+      - ./.env
+    ports:
+      - 8000
+    entrypoint: ./entrypoint_django.sh
+
+    labels:
+      traefik.enable: "true"
+
+      traefik.http.routers.bakery.rule: Host(`qns.intw.logo-diffusion.com`)
+      traefik.http.routers.bakery.entrypoints: web,websecure
+      traefik.http.routers.bakery.tls: "true"
+      traefik.http.routers.bakery.tls.certresolver: production
+
+
+volumes:
+  db:
