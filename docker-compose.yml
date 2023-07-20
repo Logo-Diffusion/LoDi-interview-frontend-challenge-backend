@@ -17,3 +17,8 @@ services:
       traefik.http.routers.lodi-interview.entrypoints: web,websecure
       traefik.http.routers.lodi-interview.tls: "true"
       traefik.http.routers.lodi-interview.tls.certresolver: production
+
+networks:
+  default:
+    name: "traefik"
+    external: true
