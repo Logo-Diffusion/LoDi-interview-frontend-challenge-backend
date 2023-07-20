@@ -17,6 +17,7 @@ import os
 env = environ.Env(
     DEBUG=(bool, False),
     ALLOWED_HOSTS=(str, "*"),
+    CSRF_TRUSTED_ORIGINS=(str, ""),
 
 )
 
@@ -118,6 +119,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# CSRF Origins
+CSRF_TRUSTED_ORIGINS = [
+    *env('CSRF_TRUSTED_ORIGINS').split(',')
 ]
 
 
