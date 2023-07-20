@@ -13,8 +13,7 @@ services:
     labels:
       traefik.enable: "true"
 
-      traefik.http.routers.bakery.rule: Host(`qstnr.intvw.logodiffusion.com`)
-      traefik.http.routers.bakery.entrypoints: web,websecure
-      traefik.http.routers.bakery.tls: "true"
-      traefik.http.routers.bakery.tls.certresolver: production
-
+      traefik.http.routers.lodi-interview.rule: Host(`qstnr.intvw.logodiffusion.com`)
+      traefik.http.routers.lodi-interview.entrypoints: web,websecure
+      traefik.http.routers.lodi-interview.tls: "true"
+      traefik.http.routers.lodi-interview.tls.certresolver: production
