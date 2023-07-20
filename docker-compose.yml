@@ -15,7 +15,7 @@ services:
     labels:
       traefik.enable: "true"
 
-      traefik.http.routers.bakery.rule: Host(`qns.intw.logo-diffusion.com`)
+      traefik.http.routers.bakery.rule: Host(`qstnr.intvw.logodiffusion.com`)
       traefik.http.routers.bakery.entrypoints: web,websecure
       traefik.http.routers.bakery.tls: "true"
       traefik.http.routers.bakery.tls.certresolver: production
