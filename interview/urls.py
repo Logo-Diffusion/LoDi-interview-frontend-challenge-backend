@@ -27,6 +27,7 @@ schema_view = get_schema_view(
         # contact=openapi.Contact(email=""),
         # license=openapi.License(name="BSD License"),
     ),
+    url='https://qstnr.intvw.logodiffusion.com/api/',
     public=True,
     permission_classes=[permissions.AllowAny],
 )
