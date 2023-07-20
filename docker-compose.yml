@@ -4,8 +4,6 @@ services:
   django:
     build: .
     image: lodi-interview-backend
-    volumes:
-      - db:/app/db.sqlite3
     env_file:
       - ./.env
     ports:
@@ -20,6 +18,3 @@ services:
       traefik.http.routers.bakery.tls: "true"
       traefik.http.routers.bakery.tls.certresolver: production
 
-
-volumes:
-  db:
