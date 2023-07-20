@@ -16,4 +16,5 @@ class QuestionnaireFilter(django_filters.FilterSet):
 class QuestionnaireView(ModelViewSet):
     serializer_class = QuestionnaireSerializer
     filterset_class = QuestionnaireFilter
+    queryset = Questionnaire.objects.all()
     permission_classes = []
